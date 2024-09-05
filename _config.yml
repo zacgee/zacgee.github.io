@@ -4,3 +4,8 @@ author: "Zachary Geelalsingh"
 email: "zgeelalsingh2022@my.fit.com"
 theme: minima
 url: "https://zacgee.github.io"
+header_pages:
+  - index.md          # Homepage (Welcome page)
+  - projects.md       # Projects page
+  - blog.md           # Blog page
+
