@@ -1,0 +1,270 @@
+/* ======= General Page Styles ======= */
+body {
+    font-family: 'Inter', sans-serif; /* Use a clean modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333;
+}
+
+/* ======= Navigation Bar ======= */
+.navbar {
+    background-color: white; /* Green background */
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #29a547;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #29a547;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b; /* Yellow hover effect */
+}
+
+/* ======= Page Content Styling ======= */
+.content {
+    margin-top: 80px; /* Prevents content from being hidden under the navbar */
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ======= Profile Card on About Page ======= */
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #29a547;
+    margin-bottom: 15px;
+}
+
+.profile-card h1 {
+    margin: 10px 0;
+    color: #222;
+}
+
+.profile-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* ======= Skill Badges ======= */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-badge {
+    background: #29a547;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+/* ======= Buttons & Links ======= */
+.button {
+    text-decoration: none;
+    font-size: 1.2rem;
+    background: #29a547;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #29a547;
+}
+
+/* ======= Responsive Design ======= */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ======= Projects Page Styling ======= */
+
+/* Header Section */
+.projects-header {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures text aligns centrally */
+    justify-content: center;
+}
+
+
+.projects-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.projects-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.project-card h2 {
+    color: #29a547;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #29a547;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+}
+
+/* ======= Blog Page Styling ======= */
+
+/* Blog Header */
+.blog-header {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.blog-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.blog-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Blog List Container */
+.blog-list {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Individual Blog Post */
+.blog-post {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.blog-title {
+    font-size: 1.2rem;
+    color: #29a547;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+.blog-title:hover {
+    text-decoration: underline;
+}
+

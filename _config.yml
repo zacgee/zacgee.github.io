@@ -2,7 +2,9 @@ title: "Zachary Geelalsingh's Personal Website"
 description: "A personal website where I showcase my projects and blog about my experiences."
 author: "Zachary Geelalsingh"
 email: "zgeelalsingh2022@my.fit.com"
-theme: minima
+#theme: minima
+sass:
+  style: compressed
 url: "https://zacgee.github.io"
 header_pages:
   - index.md          # Homepage (Welcome page)
