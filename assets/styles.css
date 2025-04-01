@@ -68,7 +68,7 @@ body {
     margin-right: auto;
 }
 
-/* ======= Profile Card on About Page ======= */
+/* ======= Profile Card on Home Page ======= */
 .profile-card {
     background: white;
     border-radius: 12px;
@@ -82,6 +82,7 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: top;
     border: 3px solid #29a547;
     margin-bottom: 15px;
 }

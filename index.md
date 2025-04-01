@@ -26,7 +26,7 @@ title: "Home"
     <span class="skill-badge">React</span>
     <span class="skill-badge">Node.js</span>
     <span class="skill-badge">React Native</span>
-    <span class="skill-badge">PostgreSQL</span>
+    <span class="skill-badge">SQL</span>
     <span class="skill-badge">Java</span>
     <span class="skill-badge">C++</span>
     <span class="skill-badge">C</span>
