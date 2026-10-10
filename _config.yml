@@ -1,13 +1,18 @@
-title: "Zachary Geelalsingh's Personal Website"
-description: "A personal website where I showcase my projects and blog about my experiences."
+title: "Zachary Geelalsingh"
+description: "Software developer building web and mobile apps."
 author: "Zachary Geelalsingh"
 email: "zgeelalsingh2022@my.fit.com"
-#theme: minima
-sass:
-  style: compressed
 url: "https://zacgee.github.io"
-header_pages:
-  - index.md          # Homepage (Welcome page)
-  - projects.md       # Projects page
-  - blog.md           # Blog page
+github: "zacgee"
+linkedin: "zacgee"
+location: "U.S.A."
 
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor

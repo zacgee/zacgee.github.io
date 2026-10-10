@@ -1,0 +1,12 @@
+<ol class="index">
+  {% for project in site.data.projects %}
+  <li class="index__row">
+    <span class="index__num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+    <div class="index__body">
+      <h3 class="index__title"><a href="{{ project.url }}">{{ project.name }}</a></h3>
+      <p>{{ project.description }}</p>
+    </div>
+    <span class="index__meta">{{ project.stack }}</span>
+  </li>
+  {% endfor %}
+</ol>
