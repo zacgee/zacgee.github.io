@@ -24,7 +24,8 @@ title: "Index"
 
 <section class="section">
   <h2 class="label"><span>02</span> Selected projects</h2>
-  {% include project-list.html %}
+  {% include project-list.html limit=4 %}
+  {% if site.data.projects.size > 4 %}<p class="back"><a href="{{ "/projects/" | relative_url }}">All {{ site.data.projects.size }} projects →</a></p>{% endif %}
 </section>
 
 {% if site.posts.size > 0 %}

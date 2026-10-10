@@ -1,17 +1,24 @@
+- name: "Story Poster Cutout"
+  stack: "JavaScript · Canvas"
+  description: "Strips the blurred backdrop from Letterboxd's Instagram Story image, leaving the poster, profile picture and rating as a transparent sticker. Runs entirely in the browser."
+  url: "https://zacgee.github.io/letterboxd-remove-bg/"
+
 - name: "Clemente Center App"
   stack: "React Native"
   description: "Tracks gym traffic so students can plan workouts around the busy hours."
   url: "https://sites.google.com/my.fit.edu/pantherfit/home?authuser=0"
-  label: "Site"
 
 - name: "SpotStat"
   stack: "Vanilla JS · Spotify API"
   description: "Your Spotify listening statistics: top artists, tracks, and trends."
   url: "https://spotstats-c95dd.web.app/"
-  label: "App"
 
 - name: "zacgee.github.io"
   stack: "Jekyll"
   description: "This site. Static, no JavaScript, no frameworks."
   url: "https://github.com/zacgee/zacgee.github.io"
-  label: "Source"
+
+- name: "Home's Roti"
+  stack: "Squarespace"
+  description: "Design and SEO for the website of Home Restaurant, a Trinidadian roti shop with over 40 years of history and three locations in Arima and Sangre Grande."
+  url: "https://www.homesroti.com/"
