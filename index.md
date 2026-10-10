@@ -9,7 +9,7 @@ title: "Index"
     <h1 class="display">Zachary<br>Geelalsingh</h1>
   </div>
   <figure class="portrait">
-    <img src="{{ "/assets/portrait.jpg" | relative_url }}" width="720" height="900" alt="Portrait of Zachary Geelalsingh">
+    <img src="{{ "/assets/portrait.jpg" | relative_url }}" width="640" height="800" alt="Portrait of Zachary Geelalsingh">
     <figcaption class="label">Fig. 01</figcaption>
   </figure>
 </section>
