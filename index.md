@@ -17,7 +17,7 @@ title: "Index"
 <section class="section">
   <h2 class="label"><span>01</span> About</h2>
   <div class="prose">
-    <p>I'm a Programmer Analyst at First Citizens Bank in Trinidad and Tobago. Before that I studied Computer Science at Florida Institute of Technology. Outside of work I build web and mobile app. I enjoy figuring out the problem, shipping something, then making it simpler.</p>
+    <p>I'm a Programmer Analyst at First Citizens Bank in Trinidad and Tobago. Before that I studied Computer Science at Florida Institute of Technology. Outside of work I build web and mobile apps. I enjoy figuring out the problem, shipping something, then making it simpler.</p>
     <p class="muted">Python · JavaScript · React · React Native · Node.js · SQL · Java · C++ · C</p>
   </div>
 </section>
