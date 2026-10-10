@@ -1,0 +1,17 @@
+- name: "Clemente Center App"
+  stack: "React Native"
+  description: "Tracks gym traffic so students can plan workouts around the busy hours."
+  url: "https://sites.google.com/my.fit.edu/pantherfit/home?authuser=0"
+  label: "Site"
+
+- name: "SpotStat"
+  stack: "Vanilla JS · Spotify API"
+  description: "Your Spotify listening statistics: top artists, tracks, and trends."
+  url: "https://spotstats-c95dd.web.app/"
+  label: "App"
+
+- name: "zacgee.github.io"
+  stack: "Jekyll"
+  description: "This site. Static, no JavaScript, no frameworks."
+  url: "https://github.com/zacgee/zacgee.github.io"
+  label: "Source"

@@ -1,271 +1,408 @@
-/* ======= General Page Styles ======= */
+/* ---------------------------------------------------------------
+   Paper & ink. Two typefaces, one rule weight, no shadows.
+   --------------------------------------------------------------- */
+
+:root {
+  --paper: #f8f5e4;
+  --ink: #111110;
+  --ink-soft: #55534b;
+  --rule: #111110;
+
+  --serif: "Instrument Serif", "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --measure: 46rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #12120f;
+    --ink: #f1edd8;
+    --ink-soft: #a29f8e;
+    --rule: #f1edd8;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-    font-family: 'Inter', sans-serif; /* Use a clean modern font */
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Light gray background */
-    color: #333;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.3125rem;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ======= Navigation Bar ======= */
-.navbar {
-    background-color: white; /* Green background */
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+::selection {
+  background: var(--ink);
+  color: var(--paper);
 }
 
-.container {
-    display: flex;
-    width: 90%;
-    max-width: 1000px;
-    justify-content: space-between;
-    align-items: center;
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
-.logo {
-    font-size: 1.5rem;
-    color: #29a547;
-    text-decoration: none;
-    font-weight: bold;
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
-.nav-links li {
-    display: inline;
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
-.nav-links a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #29a547;
-    transition: 0.3s;
+/* --- Mono labels: the "spec sheet" voice ----------------------- */
+
+.label,
+.masthead,
+.index__num,
+.index__meta,
+.links,
+.plate,
+.back {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.5;
 }
 
-.nav-links a:hover {
-    color: #ffeb3b; /* Yellow hover effect */
+.label {
+  margin: 0 0 1.25rem;
 }
 
-/* ======= Page Content Styling ======= */
-.content {
-    margin-top: 80px; /* Prevents content from being hidden under the navbar */
-    padding: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.label span {
+  display: inline-block;
+  min-width: 2.5em;
 }
 
-/* ======= Profile Card on Home Page ======= */
-.profile-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    text-align: center;
+.muted {
+  color: var(--ink-soft);
 }
 
-.profile-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top;
-    border: 3px solid #29a547;
-    margin-bottom: 15px;
+/* --- Masthead -------------------------------------------------- */
+
+.masthead {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.75rem 0 1rem;
+  border-bottom: 1px solid var(--rule);
 }
 
-.profile-card h1 {
-    margin: 10px 0;
-    color: #222;
+.masthead a {
+  text-decoration: none;
 }
 
-.profile-card p {
-    font-size: 1.1rem;
-    color: #555;
+.masthead__id {
+  justify-self: start;
 }
 
-/* ======= Skill Badges ======= */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+.masthead__nav {
+  display: flex;
+  gap: 1.25rem;
 }
 
-.skill-badge {
-    background: #29a547;
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 1rem;
+.masthead__nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
 }
 
-/* ======= Buttons & Links ======= */
-.button {
-    text-decoration: none;
-    font-size: 1.2rem;
-    background: #29a547;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: 0.3s;
+.masthead__nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
 }
 
-.button:hover {
-    background: #29a547;
+.masthead__loc {
+  justify-self: end;
+  white-space: nowrap;
 }
 
-/* ======= Responsive Design ======= */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
+.cursor {
+  animation: blink 1.1s steps(1) infinite;
 }
 
-/* ======= Projects Page Styling ======= */
-
-/* Header Section */
-.projects-header {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 50px 20px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Ensures text aligns centrally */
-    justify-content: center;
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
-
-.projects-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
 }
 
-.projects-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+/* --- Display type ---------------------------------------------- */
+
+.hero {
+  padding: clamp(3rem, 10vw, 6rem) 0 clamp(2.5rem, 7vw, 4rem);
+  border-bottom: 1px solid var(--rule);
 }
 
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive columns */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+.hero--portrait {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 1.5rem;
 }
 
-/* Individual Project Card */
-.project-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+.hero__text {
+  min-width: 0;
 }
 
-.project-card h2 {
-    color: #29a547;
+.portrait {
+  margin: 0;
+  width: 10rem;
 }
 
-.project-card p {
-    font-size: 1rem;
-    color: #555;
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
 }
 
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #29a547;
-    text-decoration: none;
-    font-weight: bold;
+.portrait figcaption {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
 }
 
-.project-card a:hover {
-    text-decoration: underline;
+.hero--sub {
+  padding-bottom: 2.5rem;
 }
 
-/* Hover Effect */
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+.display {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(3.75rem, 15vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-    }
+.display--md {
+  font-size: clamp(3rem, 10vw, 5rem);
+  line-height: 0.95;
 }
 
-/* ======= Blog Page Styling ======= */
+/* --- Sections -------------------------------------------------- */
 
-/* Blog Header */
-.blog-header {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 50px 20px;
+.section {
+  padding: 2.25rem 0 2.5rem;
+  border-bottom: 1px solid var(--rule);
 }
 
-.blog-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+.prose p {
+  margin: 0 0 1em;
 }
 
-.blog-header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+.prose p:last-child {
+  margin-bottom: 0;
 }
 
-/* Blog List Container */
-.blog-list {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+.prose .muted {
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
 }
 
-/* Individual Blog Post */
-.blog-post {
-    padding: 15px 20px;
-    border-bottom: 1px solid #ddd;
+/* --- Numbered index (projects, posts) -------------------------- */
+
+.index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.blog-date {
-    font-size: 0.9rem;
-    color: #777;
+.index__row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 0 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--rule) 25%, transparent);
 }
 
-.blog-title {
-    font-size: 1.2rem;
-    color: #29a547;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-top: 5px;
+.index__row:first-child {
+  border-top: 0;
+  padding-top: 0;
 }
 
-.blog-title:hover {
-    text-decoration: underline;
+.index__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.1;
 }
 
+.index__title a {
+  text-decoration: none;
+}
+
+.index__title a::after {
+  content: " ↗";
+  font-family: var(--mono);
+  font-size: 0.5em;
+  vertical-align: 0.4em;
+}
+
+.index__title a[href^="/"]::after {
+  content: "";
+}
+
+.index__title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.index__body p {
+  margin: 0.25rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.125rem;
+}
+
+.index__meta {
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+/* --- Contact links --------------------------------------------- */
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  font-size: 0.8125rem;
+}
+
+/* --- Post ------------------------------------------------------ */
+
+.post {
+  padding: clamp(3rem, 8vw, 5rem) 0 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post .display {
+  margin-bottom: 2.5rem;
+}
+
+.post .prose h2,
+.post .prose h3 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  margin: 2rem 0 0.75rem;
+}
+
+.post .prose code,
+.post .prose pre {
+  font-family: var(--mono);
+  font-size: 0.8em;
+}
+
+.post .prose pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--rule);
+}
+
+.post .prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.back {
+  margin: 2.5rem 0 0;
+}
+
+.back a {
+  text-decoration: none;
+}
+
+.back a:hover {
+  text-decoration: underline;
+}
+
+/* --- Colophon: black plates ------------------------------------ */
+
+.colophon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2.5rem 0 3rem;
+}
+
+.plate {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 3px;
+}
+
+/* --- Small screens --------------------------------------------- */
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1.1875rem;
+  }
+
+  .masthead {
+    grid-template-columns: 1fr auto;
+    row-gap: 0.75rem;
+  }
+
+  .masthead__nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 1rem;
+  }
+
+  .hero--portrait {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portrait {
+    grid-row: 1;
+    width: 8.5rem;
+  }
+
+  .index__row {
+    grid-template-columns: 3.25rem 1fr;
+  }
+
+  .index__meta {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 0.4rem;
+  }
+
+  .colophon {
+    grid-template-columns: 1fr;
+  }
+}

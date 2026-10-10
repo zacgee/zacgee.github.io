@@ -1,0 +1,10 @@
+<ol class="index">
+  {% for post in site.posts limit: include.limit %}
+  <li class="index__row">
+    <span class="index__num">{{ post.date | date: "%Y.%m" }}</span>
+    <div class="index__body">
+      <h3 class="index__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

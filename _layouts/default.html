@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
 </head>
 <body>
+  <div class="page">
+    <header class="masthead">
+      <a class="masthead__id" href="{{ "/" | relative_url }}">Z. Geelalsingh<span class="cursor">_</span></a>
+      <nav class="masthead__nav" aria-label="Primary">
+        <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Index</a>
+        <a href="{{ "/projects/" | relative_url }}"{% if page.url == "/projects/" %} aria-current="page"{% endif %}>Projects</a>
+        {% if site.posts.size > 0 %}<a href="{{ "/blog/" | relative_url }}"{% if page.url == "/blog/" or page.layout == "post" %} aria-current="page"{% endif %}>Writing</a>{% endif %}
+        <a href="{{ "/assets/Zachary_Resume.pdf" | relative_url }}">Résumé</a>
+      </nav>
+      <span class="masthead__loc">[ {{ site.location }} ]</span>
+    </header>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">Zachary Geelalsingh</a>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/blog/">Blog</a></li>
-            </ul>
-        </div>
-    </nav>
+    <main>
+      {{ content }}
+    </main>
 
-    <!-- Page Content -->
-    <div class="content">
-        {{ content }}
-    </div>
-
+    <footer class="colophon">
+      <div class="plate">
+        <span>Distributed by:</span>
+        <span>{{ site.url | remove: "https://" }}</span>
+      </div>
+      <div class="plate">
+        <span>Last revised:</span>
+        <span>{{ site.time | date: "%Y.%m.%d" }}</span>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

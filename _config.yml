@@ -1,13 +1,18 @@
-title: "Zachary Geelalsingh's Personal Website"
-description: "A personal website where I showcase my projects and blog about my experiences."
+title: "Zachary Geelalsingh"
+description: "Programmer Analyst at First Citizens Bank in Trinidad and Tobago."
 author: "Zachary Geelalsingh"
-email: "zgeelalsingh2022@my.fit.com"
-#theme: minima
-sass:
-  style: compressed
+email: "zachary.geelalsingh@gmail.com"
 url: "https://zacgee.github.io"
-header_pages:
-  - index.md          # Homepage (Welcome page)
-  - projects.md       # Projects page
-  - blog.md           # Blog page
+github: "zacgee"
+linkedin: "zacgee"
+location: "Trinidad & Tobago"
 
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor
