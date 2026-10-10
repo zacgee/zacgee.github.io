@@ -17,7 +17,7 @@
     <header class="masthead">
       <a class="masthead__id" href="{{ "/" | relative_url }}">Z. Geelalsingh<span class="cursor">_</span></a>
       <nav class="masthead__nav" aria-label="Primary">
-        <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Index</a>
+        <a href="{{ "/" | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>Home</a>
         <a href="{{ "/projects/" | relative_url }}"{% if page.url == "/projects/" %} aria-current="page"{% endif %}>Projects</a>
         {% if site.posts.size > 0 %}<a href="{{ "/blog/" | relative_url }}"{% if page.url == "/blog/" or page.layout == "post" %} aria-current="page"{% endif %}>Writing</a>{% endif %}
         <a href="{{ "/assets/Zachary_Resume.pdf" | relative_url }}">Résumé</a>

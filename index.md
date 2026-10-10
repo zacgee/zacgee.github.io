@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Index"
+title: "Home"
 ---
 
 <section class="hero hero--portrait">
