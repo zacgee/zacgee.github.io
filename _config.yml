@@ -1,11 +1,11 @@
 title: "Zachary Geelalsingh"
-description: "Software developer building web and mobile apps."
+description: "Programmer Analyst at First Citizens Bank in Trinidad and Tobago."
 author: "Zachary Geelalsingh"
-email: "zgeelalsingh2022@my.fit.com"
+email: "zachary.geelalsingh@gmail.com"
 url: "https://zacgee.github.io"
 github: "zacgee"
 linkedin: "zacgee"
-location: "U.S.A."
+location: "Trinidad & Tobago"
 
 plugins:
   - jekyll-feed

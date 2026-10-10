@@ -3,15 +3,21 @@ layout: default
 title: "Index"
 ---
 
-<section class="hero">
-  <p class="label">Software developer — web &amp; mobile</p>
-  <h1 class="display">Zachary<br>Geelalsingh</h1>
+<section class="hero hero--portrait">
+  <div class="hero__text">
+    <p class="label">Programmer Analyst — First Citizens Bank</p>
+    <h1 class="display">Zachary<br>Geelalsingh</h1>
+  </div>
+  <figure class="portrait">
+    <img src="{{ "/assets/portrait.jpg" | relative_url }}" width="720" height="900" alt="Portrait of Zachary Geelalsingh">
+    <figcaption class="label">Fig. 01</figcaption>
+  </figure>
 </section>
 
 <section class="section">
   <h2 class="label"><span>01</span> About</h2>
   <div class="prose">
-    <p>I'm a computer science student at Florida Institute of Technology. I build web and mobile apps, mostly in JavaScript, React and React Native, and I like the whole process: figuring out the problem, shipping something, then making it simpler.</p>
+    <p>I'm a Programmer Analyst at First Citizens Bank in Trinidad and Tobago. Before that I studied computer science at Florida Institute of Technology. Outside of work I build web and mobile apps, mostly in JavaScript, React and React Native, and I like the whole process: figuring out the problem, shipping something, then making it simpler.</p>
     <p class="muted">Python · JavaScript · React · React Native · Node.js · SQL · Java · C++ · C</p>
   </div>
 </section>

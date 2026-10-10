@@ -159,6 +159,34 @@ a:focus-visible {
   border-bottom: 1px solid var(--rule);
 }
 
+.hero--portrait {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 1.5rem;
+}
+
+.hero__text {
+  min-width: 0;
+}
+
+.portrait {
+  margin: 0;
+  width: 10rem;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+.portrait figcaption {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+}
+
 .hero--sub {
   padding-bottom: 2.5rem;
 }
@@ -352,6 +380,16 @@ a:focus-visible {
     grid-column: 1 / -1;
     grid-row: 2;
     gap: 1rem;
+  }
+
+  .hero--portrait {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portrait {
+    grid-row: 1;
+    width: 8.5rem;
   }
 
   .index__row {

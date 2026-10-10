@@ -10,5 +10,9 @@ permalink: /blog/
 </section>
 
 <section class="section">
+  {% if site.posts.size > 0 %}
   {% include post-list.html %}
+  {% else %}
+  <p class="muted">Nothing published yet.</p>
+  {% endif %}
 </section>
