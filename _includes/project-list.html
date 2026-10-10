@@ -1,5 +1,6 @@
+{% assign project_limit = include.limit | default: site.data.projects.size %}
 <ol class="index">
-  {% for project in site.data.projects %}
+  {% for project in site.data.projects limit: project_limit %}
   <li class="index__row">
     <span class="index__num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
     <div class="index__body">
