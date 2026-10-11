@@ -13,15 +13,27 @@
 
   --measure: 46rem;
   --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  color-scheme: light;
 }
 
+/* Dark follows the system unless the visitor picked a theme with the toggle. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --paper: #12120f;
     --ink: #f1edd8;
     --ink-soft: #a29f8e;
     --rule: #f1edd8;
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --paper: #12120f;
+  --ink: #f1edd8;
+  --ink-soft: #a29f8e;
+  --rule: #f1edd8;
+  color-scheme: dark;
 }
 
 *,
@@ -138,6 +150,29 @@ a:focus-visible {
 .masthead__loc {
   justify-self: end;
   white-space: nowrap;
+}
+
+.theme-toggle {
+  padding: 0 0 0 1.25rem;
+  border: 0;
+  border-left: 1px solid var(--rule);
+  line-height: 1;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .cursor {
