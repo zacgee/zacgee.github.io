@@ -15,7 +15,7 @@
 
 - name: "zacgee.github.io"
   stack: "Jekyll"
-  description: "This site. Static, no JavaScript, no frameworks."
+  description: "This site. Static, no frameworks."
   url: "https://github.com/zacgee/zacgee.github.io"
 
 - name: "Home's Roti"
